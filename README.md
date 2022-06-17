@@ -1,63 +1,66 @@
-# CodeIgniter 4 Application Starter
+## CodeIgniter 4 - Sistema de autenticação simples que inclui páginas de registro, login, alteração e recuperação de senha e upload de fotos.
+###### Português
 
-## What is CodeIgniter?
+O sistema de autenticação inclui páginas:
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+### Páginas dos visitantes
+- Registro
+- Recuperação de senha
+- Login
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+### Página do usuário cadastrado
+- Início
+- Mudar senha do usuário
+- Alterar dados do usuário
+- Alterar foto do usuário
+- Alterar configurações de envio dos e-mails
+- Sair
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+### Outras informações
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- Filtros de segurança (rotas)
+- Validações
+- Template de e-mail
+- Proteção CSRF 
+- E muito mais...
 
-## Installation & updates
+## CodeIgniter 4 - Simple authentication system that includes registration pages, login, password change and recovery and photo upload.
+###### Inglês
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+The authentication system includes pages:
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### Visitor pages
+- Record
+- Password recovery
+- Login
 
-## Setup
+### Registered user page
+- Start
+- Change user password
+- Change user data
+- Change user photo
+- Change email sending settings
+- Go out
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+### Other information
 
-## Important Change with index.php
+- Security filters (routes)
+- Validations
+- Email Template
+- CSRF protection
+- And much more...
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## Fotos / Photos
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+!(https://deploycode.com.br/public/uploads/1.png)
+!(https://deploycode.com.br/public/uploads/2.png)
+!(https://deploycode.com.br/public/uploads/3.png)
+!(https://deploycode.com.br/public/uploads/4.png)
+!(https://deploycode.com.br/public/uploads/5.png)
+!(https://deploycode.com.br/public/uploads/6.png)
+!(https://deploycode.com.br/public/uploads/7.png)
+!(https://deploycode.com.br/public/uploads/8.png)
+!(https://deploycode.com.br/public/uploads/9.png)
+!(https://deploycode.com.br/public/uploads/10.png)
 
-**Please** read the user guide for a better explanation of how CI4 works!
 
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.3 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
