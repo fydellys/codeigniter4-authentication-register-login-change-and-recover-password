@@ -137,6 +137,11 @@ class AuthController extends BaseController
                     $sendMail = SendMail(Settings('phpmailer_username'), Settings('phpmailer_username'), $emailUser, $emailUser, 'Recuperação de senha', $message);
                 }
 
+                if (!$sendMail) {
+                    session()->setFlashdata('error', 'Houve um erro no envio do link de recuperação do seu e-mail. Entre em contato com o adminstrador do site.');
+                    return redirect()->to(current_url());
+                }
+
                 $data = [
                     'recovery_hash' => $authtoken,
                     'recovery_expires' => date('Y-m-d H:i:s', strtotime('+1 day', $startDate)),
